@@ -1,5 +1,16 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+
+.fa-circle {
+  padding: 55px;
+  font-size: 55px;
+  color: blue;
+}
+
+.fa-square {
+  padding: 55px;
+  font-size: 55px;
+  color: green;
 }/*# sourceMappingURL=game.css.map */
