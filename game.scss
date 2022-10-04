@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
 .fa-circle {
     padding: 55px;
     font-size: 55px;
@@ -28,7 +33,7 @@
   color: red;
 }
 
-  .fa-smile {
+  .fa-face-smile {
     padding: 55px;
     font-size: 55px;
     color: yellow;
@@ -50,5 +55,22 @@
   color: green;
 }
 
+.fa-regular fa-star {
+  font-size: 55px;
+  color: orange;
+}
 
+.fa-regular fa-heart {
+  font-size: 55px;
+  color: red;
+}
 
+.fa-regular fa-face-smile {
+  font-size: 55px;
+  color:yellow;
+}
+
+.fa-regular fa-bell {
+  font-size: 55px;
+  color: black;
+}

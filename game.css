@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
 .fa-circle {
   padding: 55px;
   font-size: 55px;
@@ -14,4 +19,58 @@
   padding: 55px;
   font-size: 55px;
   color: green;
+}
+
+.fa-star {
+  padding: 55px;
+  font-size: 55px;
+  color: orange;
+}
+
+.fa-heart {
+  padding: 55px;
+  font-size: 55px;
+  color: red;
+}
+
+.fa-face-smile {
+  padding: 55px;
+  font-size: 55px;
+  color: yellow;
+}
+
+.fa-bell {
+  padding: 55px;
+  font-size: 55px;
+  color: black;
+}
+
+.fa-regular fa-circle {
+  font-size: 55px;
+  color: blue;
+}
+
+.fa-regular fa-square {
+  font-size: 55px;
+  color: green;
+}
+
+.fa-regular fa-star {
+  font-size: 55px;
+  color: orange;
+}
+
+.fa-regular fa-heart {
+  font-size: 55px;
+  color: red;
+}
+
+.fa-regular fa-face-smile {
+  font-size: 55px;
+  color: yellow;
+}
+
+.fa-regular fa-bell {
+  font-size: 55px;
+  color: black;
 }/*# sourceMappingURL=game.css.map */
