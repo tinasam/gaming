@@ -6,71 +6,91 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//display 3 Columns Per Row
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+  background-color: white;
+  border: 10px solid darkmagenta;
+}
+
+.grid-item {
+  padding: 55px;
+  font-size: 55px;
   text-align: center;
 }
 
+.card {
+  height: 128px;
+  width: 90px;
+  margin: 2.5px;
+}
+
+
 .fa-circle {
-    padding: 55px;
-    font-size: 55px;
     color:blue;
   }  
 
   .fa-square {
-    padding: 55px;
-    font-size: 55px;
+    // padding: 55px;
+    // font-size: 55px;
     color: green;
   } 
 
   .fa-star {
-    padding: 55px;
-    font-size: 55px;
+    // padding: 55px;
+    // font-size: 55px;
     color:orange;
   }
 
 .fa-heart {
-  padding: 55px;
-  font-size: 55px;
+  // padding: 55px;
+  // font-size: 55px;
   color: red;
 }
 
   .fa-face-smile {
-    padding: 55px;
-    font-size: 55px;
+    // padding: 55px;
+    // font-size: 55px;
     color: yellow;
   }
 
   .fa-bell {
-    padding: 55px;
-    font-size: 55px;
+    // padding: 55px;
+    // font-size: 55px;
     color: black;
   }
 
-  .fa-regular fa-circle {
-    font-size: 55px;
-    color: blue;
+  .fa-regular fa-comment {
+    // font-size: 55px;
+    color: lightblue;
   }
 
-.fa-regular fa-square {
-  font-size: 55px;
-  color: green;
+.fa-book {
+  color: darkblue ;
 }
 
-.fa-regular fa-star {
-  font-size: 55px;
-  color: orange;
+.fa-hand {
+  color: brown;
 }
 
-.fa-regular fa-heart {
-  font-size: 55px;
+.fa-cross {
+  // font-size: 55px;
   color: red;
 }
 
-.fa-regular fa-face-smile {
-  font-size: 55px;
-  color:yellow;
+.fa-church {
+  // font-size: 55px;
+  color: darkred;
 }
 
-.fa-regular fa-bell {
-  font-size: 55px;
-  color: black;
+.fa-pen {
+  // font-size: 55px;
+  color: darkgreen;
 }
