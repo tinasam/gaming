@@ -13,16 +13,27 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  background-color: white;
-  border: 10px solid darkmagenta;
+  background-color: lightpink;
 }
 
 .grid-item {
-  padding: 55px;
+  padding: 40px;
   font-size: 55px;
   text-align: center;
+  visibility: hidden;
+}
+
+#onOff {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.backgroundImg {
+  height: 150px;
+  z-index: 1;
 }
 
 .card {
@@ -33,48 +44,36 @@ body {
 
 .fa-circle {
   color: blue;
+  position: absolute;
+  left: 50px;
 }
 
 .fa-square {
   color: green;
-}
-
-.fa-star {
-  color: orange;
+  position: absolute;
+  left: 70px;
 }
 
 .fa-heart {
   color: red;
+  position: absolute;
+  left: 70px;
 }
 
 .fa-face-smile {
+  position: absolute;
+  left: 50px;
   color: yellow;
 }
 
-.fa-bell {
-  color: black;
-}
-
-.fa-regular fa-comment {
-  color: lightblue;
-}
-
-.fa-book {
-  color: darkblue;
-}
-
-.fa-hand {
-  color: brown;
-}
-
 .fa-cross {
+  position: absolute;
+  left: 70px;
   color: red;
 }
 
 .fa-church {
+  position: absolute;
   color: darkred;
-}
-
-.fa-pen {
-  color: darkgreen;
+  left: 70px;
 }/*# sourceMappingURL=game.css.map */
