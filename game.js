@@ -12,7 +12,7 @@
 let points = 0;
 // Cards display
 const cardList = document.querySelectorAll(".grid-item");
-const startButton = document.querySelector ("#onOff");
+const restartButton = document.querySelector ("#onOff");
 const frontSideCard = document.querySelectorAll(".backgroundImg");
 
 // Click to reveal shapes and images
@@ -25,8 +25,51 @@ const frontSideCard = document.querySelectorAll(".backgroundImg");
 //     cardList.style.visibility="hidden";
 //     frontSideCard.style.visibility="visible";
 // });
-let count = 0;
 
+// switch (restartButton) {
+//    case "on":
+//       display frontSideCards and reload page;
+//       break;
+//    case "off":
+// }
+
+let count = 0;
+let clickedIndex1 = 0;
+let clickedIndex2 = 0;
+let cardClick1 = "";
+
+frontSideCard.forEach((card, index)  => { 
+   card.addEventListener("click", (event) => {
+      console.log(`count = ${count}`)
+      if (count===2) {
+         console.log ("reset screen")
+         count = 0;
+         frontSideCard[clickedIndex1].style.visibility = "visible";
+         frontSideCard[clickedIndex2].style.visibility = "visible";
+         cardList[clickedIndex1].style.visibility = "hidden";
+         cardList[clickedIndex2].style.visibility = "hidden";
+         cardClick1 = "";
+      }
+   
+      card.style.visibility="hidden";
+      cardList[index].style.visibility="visible";
+      count++; 
+      if (count===1) {
+         cardClick1 = cardList[index].className;
+         clickedIndex1 = index;
+         console.log(cardClick1);
+      }
+      if (count===2) {
+         clickedIndex2 = index;
+         console.log(cardList[index].className)
+         if (cardClick1 === cardList[index].className) {
+               console.log("Woohoo - 1 point!");
+         } else {
+               console.log("Try Again");
+         }
+      }
+   });
+});
 
 
 
@@ -56,19 +99,19 @@ let count = 0;
         // }
         // });
 
-     const flipfront = (event) => {
-        event.target.style.visibility="hidden";
-        };
-     frontSideCard.forEach((card) => {
-        card.addEventListener("click", flipfront);
-     });
+   //   const flipfront = (event) => {
+   //      event.target.style.visibility="hidden";
+   //      };
+   //   frontSideCard.forEach((card) => {
+   //      card.addEventListener("click", flipfront);
+   //   });
 
-     const flipOver = (event) => {
-        event.target.style.visibility="visible";
-        };
-    cardList.forEach((cardBack) => {
-            cardBack.addEventListener("click", flipOver);
-         });   
+   //   const flipOver = (event) => {
+   //      event.target.style.visibility="visible";
+   //      };
+   //  cardList.forEach((cardBack) => {
+   //          cardBack.addEventListener("click", flipOver);
+   //       });   
      
     //  cardList.style.visibility="visible";
     
