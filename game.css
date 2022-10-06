@@ -11,6 +11,10 @@ body {
   align-items: center;
 }
 
+#fullSite {
+  visibility: hidden;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -25,7 +29,13 @@ body {
   visibility: hidden;
 }
 
-#onOff {
+#on {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#off {
   font-size: 25px;
   text-align: center;
   font-weight: bold;

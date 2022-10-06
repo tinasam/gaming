@@ -11,6 +11,10 @@ body {
   align-items: center;
 }
 
+#fullSite {
+  visibility: hidden;
+}
+
 //display 3 Columns Per Row
 .grid {
   display: grid;
@@ -18,7 +22,7 @@ body {
   margin: 0 auto;
   background-color: lightpink;
   // border: 10px solid darksalmon;
-}
+ }
 
 .grid-item {
   padding: 40px;
@@ -27,11 +31,18 @@ body {
   visibility: hidden;
 }
 
-#onOff {
+#on {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
 }
+
+#off {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
 
 .backgroundImg {
   // width: 50px;

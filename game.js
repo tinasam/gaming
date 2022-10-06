@@ -5,17 +5,31 @@
         //if the cards do not match return "Try Again"
     
     //Game ends in a "WIN"
-        // when all uncovered cards match & points ==6
+        // when all uncovered cards match & points ===6
         // OR
         // after 1 minute expires return "Sorry game over"
 
-let points = 0;
+
 // Cards display
 const cardList = document.querySelectorAll(".grid-item");
-const restartButton = document.querySelector ("#onOff");
-const frontSideCard = document.querySelectorAll(".backgroundImg");
 
-// Click to reveal shapes and images
+const frontSideCard = document.querySelectorAll(".backgroundImg");
+const beginGame = document.querySelector("#fullSite");
+const onButton = document.querySelector("#on");
+const offButton = document.querySelector("#off");
+const points = document.querySelector("#points")
+
+onButton.addEventListener ("click", (event) => {
+   beginGame.style.visibility="visible";
+   onButton.style.visibility="hidden";
+});
+
+offButton.addEventListener ("click", (event) => {
+   location.reload();
+});
+
+
+
 // frontSideCard.addEventListener("click", (event) => {
 //     frontSideCard.style.visibility="hidden";
 //     cardList.style.visibility="visible";
@@ -33,14 +47,17 @@ const frontSideCard = document.querySelectorAll(".backgroundImg");
 //    case "off":
 // }
 
+
+// && clickedIndex1 != clickedIndex2
+
 let count = 0;
 let clickedIndex1 = 0;
 let clickedIndex2 = 0;
-let cardClick1 = "";
-
+let cardClick1;
+let score = 0;
+//// Click to reveal shapes and images
 frontSideCard.forEach((card, index)  => { 
    card.addEventListener("click", (event) => {
-      console.log(`count = ${count}`)
       if (count===2) {
          console.log ("reset screen")
          count = 0;
@@ -53,7 +70,7 @@ frontSideCard.forEach((card, index)  => {
    
       card.style.visibility="hidden";
       cardList[index].style.visibility="visible";
-      count++; 
+      count++;
       if (count===1) {
          cardClick1 = cardList[index].className;
          clickedIndex1 = index;
@@ -63,9 +80,14 @@ frontSideCard.forEach((card, index)  => {
          clickedIndex2 = index;
          console.log(cardList[index].className)
          if (cardClick1 === cardList[index].className) {
+            // update point by 1
+            score += 1;
                console.log("Woohoo - 1 point!");
+               alert("Woohoo - 1 point!");
+               points.innerHTML = score;
          } else {
                console.log("Try Again");
+               alert("Try Again");
          }
       }
    });
@@ -171,9 +193,13 @@ frontSideCard.forEach((card, index)  => {
 
 
 
-// startButton.addEventListener("click", (event) => {
-//     startOver();
-// });
+// Game begins with blank screen
+
+// Click on/off button then frontSideCards displays
+
+
+
+
 
 
 
