@@ -1,10 +1,11 @@
 // Cards display
-const cardList = document.querySelectorAll(".grid-item");
+const originalCardList = document.querySelectorAll(".grid-item");
 const frontSideCard = document.querySelectorAll(".backgroundImg");
 const beginGame = document.querySelector("#fullSite");
 const onButton = document.querySelector("#on");
 const offButton = document.querySelector("#off");
 const points = document.querySelector("#points")
+let cardList;
 
 onButton.addEventListener ("click", (event) => {
    beginGame.style.visibility="visible";
@@ -17,13 +18,27 @@ offButton.addEventListener ("click", (event) => {
 
 
 
-// && clickedIndex1 != clickedIndex2
-
 let count = 0;
 let clickedIndex1 = 0;
 let clickedIndex2 = 0;
 let cardClick1;
 let score = 0;
+
+function shuffleArray(array) {
+   for (let i = array.length - 1; i > 0; i--) {
+       const j = Math.floor(Math.random() * (i + 1));
+       [array[i], array[j]] = [array[j], array[i]];
+       console.log(array[i]);
+       console.log(array[j]);
+   }
+   console.log(array);
+   return array;
+}
+console.log(cardList);
+
+cardList=shuffleArray(originalCardList)
+console.log(cardList);
+
 //// Click to reveal shapes and images
 frontSideCard.forEach((card, index)  => { 
    card.addEventListener("click", (event) => {
@@ -41,8 +56,9 @@ frontSideCard.forEach((card, index)  => {
       }
       
       card.style.visibility="hidden";
+      console.log(cardList[index]);
       cardList[index].style.visibility="visible";
-      count++;
+         count++;
       if (count===1) {
          cardClick1 = cardList[index].className;
          clickedIndex1 = index;
@@ -62,8 +78,24 @@ frontSideCard.forEach((card, index)  => {
                alert("Try Again");
          }
       }
+      if (score===6) {
+         startConfetti()
+      }
    });
 });
+
+const startConfetti=()=>{
+   setTimeout(function(){
+           confetti.start()
+   },1000  );
+}    
+
+const stopConfetti = () => {
+   setTimeout(function() {
+       confetti.stop()
+   }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+};
+
 
 
 

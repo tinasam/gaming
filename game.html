@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Memory Matching Game</title>
     <link rel="stylesheet" href="game.css">
+    <script src="confetti.js"></script>
     <script src="https://kit.fontawesome.com/d98e88b555.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <h4>Click the On button to play</h4>
     <button type="button" id="on">On</button>    
     <h3> Points: <span id="points">0</span></h3>
-    <embed src="./sounds/gamesong.mp3" loop="true" autostart="false" width=300px height=60px padding=0px margin=0/> 
+    <audio src="./sounds/gamesong.mp3" loop="true" autostart="false" controls></audio>
    
     <div id="fullSite">
         <button type="button" id="off">Off</button>

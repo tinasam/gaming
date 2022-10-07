@@ -17,13 +17,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  background-color: lightpink;
+  background-color: lightblue;
 }
 
 .grid-item {
@@ -48,12 +49,7 @@ body {
 .backgroundImg {
   height: 150px;
   z-index: 1;
-}
-
-.card {
-  height: 128px;
-  width: 90px;
-  margin: 2.5px;
+  border: 3px solid darkblue;
 }
 
 .fa-circle {
@@ -90,4 +86,35 @@ body {
   position: absolute;
   color: darkred;
   left: 70px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: darkblue;
+  color: #fff;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: white;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+  visibility: hidden;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  visibility: hidden;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  visibility: hidden;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  color: white;
+}
+
+audio::-webkit-media-controls-mute-button {
+  background-color: white;
+  border-radius: 50%;
 }/*# sourceMappingURL=game.css.map */

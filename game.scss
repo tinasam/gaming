@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 
 //display 3 Columns Per Row
@@ -24,7 +25,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  background-color: lightpink;
+  background-color: lightblue;
   // border: 10px solid darksalmon;
  }
 
@@ -33,6 +34,7 @@ body {
   font-size: 55px;
   text-align: center;
   visibility: hidden;
+  // border: 3px solid darkblue;
 }
 
 #on {
@@ -52,13 +54,14 @@ body {
   // width: 50px;
   height: 150px;
   z-index: 1;
+  border: 3px solid darkblue;
 }
 
-.card {
-  height: 128px;
-  width: 90px;
-  margin: 2.5px;
-}
+// .card {
+//   height: 128px;
+//   width: 90px;
+//   margin: 2.5px;
+// }
 
 
 .fa-circle {
@@ -97,3 +100,29 @@ body {
   left: 70px;
 }
 
+
+audio::-webkit-media-controls-panel {
+  background-color:darkblue;
+  color: #fff;
+}
+audio::-webkit-media-controls-play-button {
+  background-color: white;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+  visibility: hidden;
+}
+audio::-webkit-media-controls-current-time-display {
+  visibility: hidden;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  visibility: hidden;
+}
+audio::-webkit-media-controls-volume-slider {
+  color: white;
+}
+audio::-webkit-media-controls-mute-button {
+  background-color: white;
+  border-radius: 50%;
+}
