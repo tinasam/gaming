@@ -1,18 +1,5 @@
-// Baby matching game 
-    //Click first card to reveal shape/image
-    //Click second card to see if it matches
-        //if the two cards match give one point and return "Woo-hoo!"
-        //if the cards do not match return "Try Again"
-    
-    //Game ends in a "WIN"
-        // when all uncovered cards match & points ===6
-        // OR
-        // after 1 minute expires return "Sorry game over"
-
-
 // Cards display
 const cardList = document.querySelectorAll(".grid-item");
-
 const frontSideCard = document.querySelectorAll(".backgroundImg");
 const beginGame = document.querySelector("#fullSite");
 const onButton = document.querySelector("#on");
@@ -30,24 +17,6 @@ offButton.addEventListener ("click", (event) => {
 
 
 
-// frontSideCard.addEventListener("click", (event) => {
-//     frontSideCard.style.visibility="hidden";
-//     cardList.style.visibility="visible";
-// });
-
-// cardList.addEventListener("click", (event) => {
-//     cardList.style.visibility="hidden";
-//     frontSideCard.style.visibility="visible";
-// });
-
-// switch (restartButton) {
-//    case "on":
-//       display frontSideCards and reload page;
-//       break;
-//    case "off":
-// }
-
-
 // && clickedIndex1 != clickedIndex2
 
 let count = 0;
@@ -61,13 +30,16 @@ frontSideCard.forEach((card, index)  => {
       if (count===2) {
          console.log ("reset screen")
          count = 0;
-         frontSideCard[clickedIndex1].style.visibility = "visible";
-         frontSideCard[clickedIndex2].style.visibility = "visible";
-         cardList[clickedIndex1].style.visibility = "hidden";
-         cardList[clickedIndex2].style.visibility = "hidden";
          cardClick1 = "";
+         if (cardList[clickedIndex1].className !== cardList[clickedIndex2].className) {
+            frontSideCard[clickedIndex1].style.visibility = "visible";
+            frontSideCard[clickedIndex2].style.visibility = "visible";
+            cardList[clickedIndex1].style.visibility = "hidden";
+            cardList[clickedIndex2].style.visibility = "hidden";
+         }
+
       }
-   
+      
       card.style.visibility="hidden";
       cardList[index].style.visibility="visible";
       count++;

@@ -13,6 +13,10 @@ body {
 
 #fullSite {
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 //display 3 Columns Per Row

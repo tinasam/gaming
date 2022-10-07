@@ -8,15 +8,16 @@
     <script src="https://kit.fontawesome.com/d98e88b555.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h3>"YOU WIN" by matching all 6 shapes/images and EARNING 6 points:</h3>
-        <h3> Points: <span id="points">0</span></h3>
-        <button type="button" id="on">On</button>
+    <h3>Baby Matching Game</h3>
+    <h4>Click the On button to play</h4>
+    <button type="button" id="on">On</button>    
+    <h3> Points: <span id="points">0</span></h3>
+    <embed src="./sounds/gamesong.mp3" loop="true" autostart="false" width=300px height=60px padding=0px margin=0/> 
+   
     <div id="fullSite">
         <button type="button" id="off">Off</button>
-
-        
-        
-         <div class="grid">
+        <h3>"YOU WIN" by matching all 6 shapes/images and EARNING 6 points:</h3>
+          <div class="grid">
             <div style="position:relative;"><img class="backgroundImg" src="./zoombackground.jpg" alt=""><i class="grid-item fa-solid fa-circle"></i></div>
             <div style="position:relative;"><img class="backgroundImg" src="./zoombackground.jpg" alt=""><i class="grid-item fa-solid fa-square"></i></div>
             <div style="position:relative;"><img class="backgroundImg" src="./zoombackground.jpg" alt=""><i class="grid-item fa-solid fa-heart"></i></div>
@@ -34,6 +35,7 @@
             <div style="position:relative;"><img class="backgroundImg" src="./zoombackground.jpg" alt=""><i class="grid-item fa-solid fa-church"></i></div>
         </div>
     </div>
+    
 
    
     <script src="./game.js"></script>  
