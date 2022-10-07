@@ -1,15 +1,23 @@
+import {startTimer} from "./timer.js";
+
 // Cards display
-const originalCardList = document.querySelectorAll(".grid-item");
+const cardList = document.querySelectorAll(".grid-item");
 const frontSideCard = document.querySelectorAll(".backgroundImg");
 const beginGame = document.querySelector("#fullSite");
 const onButton = document.querySelector("#on");
 const offButton = document.querySelector("#off");
 const points = document.querySelector("#points")
-let cardList;
+const timer = document.getElementById("timer");
+// let cardList;
+let timeInterval;
+let sec=15;
+
 
 onButton.addEventListener ("click", (event) => {
    beginGame.style.visibility="visible";
    onButton.style.visibility="hidden";
+   startTimer(sec,timeInterval);
+   console.log(sec);
 });
 
 offButton.addEventListener ("click", (event) => {
@@ -24,22 +32,24 @@ let clickedIndex2 = 0;
 let cardClick1;
 let score = 0;
 
-function shuffleArray(array) {
-   for (let i = array.length - 1; i > 0; i--) {
-       const j = Math.floor(Math.random() * (i + 1));
-       [array[i], array[j]] = [array[j], array[i]];
-       console.log(array[i]);
-       console.log(array[j]);
-   }
-   console.log(array);
-   return array;
-}
-console.log(cardList);
 
-cardList=shuffleArray(originalCardList)
-console.log(cardList);
+// function shuffleArray(array) {
+//    for (let i = array.length - 1; i > 0; i--) {
+//        const j = Math.floor(Math.random() * (i + 1));
+//        [array[i], array[j]] = [array[j], array[i]];
+//        console.log(array[i]);
+//        console.log(array[j]);
+//    }
+//    console.log(array);
+//    return array;
+// }
+// console.log(cardList);
+
+// cardList=shuffleArray(originalCardList)
+// console.log(cardList);
 
 //// Click to reveal shapes and images
+
 frontSideCard.forEach((card, index)  => { 
    card.addEventListener("click", (event) => {
       if (count===2) {
@@ -78,8 +88,11 @@ frontSideCard.forEach((card, index)  => {
                alert("Try Again");
          }
       }
-      if (score===6) {
-         startConfetti()
+      console.log(timer.innerHTML);
+      if (score === 6 || timer.innerHTML==="00") {
+            startConfetti()
+            alert("Game Over");
+            return 
       }
    });
 });
