@@ -10,8 +10,12 @@ const points = document.querySelector("#points")
 const timer = document.getElementById("timer");
 // let cardList;
 let timeInterval;
-let sec=15;
-
+let sec=60;
+let count = 0;
+let clickedIndex1 = 0;
+let clickedIndex2 = 0;
+let cardClick1;
+let score = 0;
 
 onButton.addEventListener ("click", (event) => {
    beginGame.style.visibility="visible";
@@ -25,30 +29,6 @@ offButton.addEventListener ("click", (event) => {
 });
 
 
-
-let count = 0;
-let clickedIndex1 = 0;
-let clickedIndex2 = 0;
-let cardClick1;
-let score = 0;
-
-
-// function shuffleArray(array) {
-//    for (let i = array.length - 1; i > 0; i--) {
-//        const j = Math.floor(Math.random() * (i + 1));
-//        [array[i], array[j]] = [array[j], array[i]];
-//        console.log(array[i]);
-//        console.log(array[j]);
-//    }
-//    console.log(array);
-//    return array;
-// }
-// console.log(cardList);
-
-// cardList=shuffleArray(originalCardList)
-// console.log(cardList);
-
-//// Click to reveal shapes and images
 
 frontSideCard.forEach((card, index)  => { 
    card.addEventListener("click", (event) => {
@@ -108,115 +88,6 @@ const stopConfetti = () => {
        confetti.stop()
    }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
 };
-
-
-
-
-// input.forEach( function(element){
-//     element.addEventListener(`click`,function(){
-//         console.log(`clicked`);
-//     });
-// });
-
-
-// frontSideCard.forEach((indCard)  => { 
-//         card.addEventListener("click", (event) => {
-//         card.style.visibility="hidden";
-//         indCard.style.visibility="visible";
-//         });
-//         count++; 
-        // if (count===1) {
-        //     let cardClick1 = cardList[card].className;
-        //     console.log(cardClick1);
-        // }
-        // if (count===2) {
-        //     if (cardClick1 == cardList[card].className) {
-        //         console.log("Woohoo - 1 point!");
-        //     } else {
-        //         console.log("Try Again");
-        //     }
-        // }
-        // });
-
-   //   const flipfront = (event) => {
-   //      event.target.style.visibility="hidden";
-   //      };
-   //   frontSideCard.forEach((card) => {
-   //      card.addEventListener("click", flipfront);
-   //   });
-
-   //   const flipOver = (event) => {
-   //      event.target.style.visibility="visible";
-   //      };
-   //  cardList.forEach((cardBack) => {
-   //          cardBack.addEventListener("click", flipOver);
-   //       });   
-     
-    //  cardList.style.visibility="visible";
-    
-        
-       
-// }
-
-
-// let cardSet;
-// empty array to display cards 
-
-
-// window.onload = function() {
-//     shuffleCards();
-//     startGame();
-// }
-
-// let shuffleCards = () => {
-//     cardSet = cardList.concat(cardList);  // This displays two of each card
-//     console.log(cardSet);
-//     // shuffle
-//     for (let i = 0; i < cardSet.length; i++) {
-//         let j = Math.floor(Math.random() * cardSet.length); //gets random i
-//         //swap
-//         let temp = cardSet[i];
-//         cardSet[i] = cardSet[j];
-//         cardSet[j] = temp;
-//     }
-//     console.log(cardSet);
-// }
-
-// const startGame = () => {
-
-// }
-
-// console.log(frontSideCard);
-// const checkCards = frontSideCard.map((card)  => { 
-//         card.addEventListener("click", (event) => {
-//         card.style.visibility="hidden";
-//         cardList[card].style.visibility="visible";
-//         });
-//         count++;
-//         return;
-
-        // if (count===1) {
-        //     let cardClick1 = cardList[card].className;
-        //     console.log(cardClick1);
-        // }
-        // if (count===2) {
-        //     if (cardClick1 == cardList[card].className) {
-        //         console.log("Woohoo - 1 point!");
-        //     } else {
-        //         console.log("Try Again");
-        //     }
-        // }
-        // });
-
-
-
-// Game begins with blank screen
-
-// Click on/off button then frontSideCards displays
-
-
-
-
 
 
 
